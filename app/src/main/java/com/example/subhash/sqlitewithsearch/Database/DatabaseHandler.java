@@ -113,6 +113,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
          db.execSQL("DELETE FROM " + TABLE_DETAIL+ " WHERE "+contact+"='"+conatctNo+"'");
+         db.close();
 //        return db.delete(TABLE_DETAIL, contact + "=" + conatctNo, null);
         return 0;
 
